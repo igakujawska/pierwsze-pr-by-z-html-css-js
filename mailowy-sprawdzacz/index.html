@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>mailowy sprawdzacz</title>
+</head>
+<body>
+
+<div id="form" class="card">
+    tu e-mail: 👇 <input type="text" id="email" autocomplete="off">
+    <p id="validation" class="red">twój email nie wygląda poprawnie...</p>
+    
+    <button id="send-button" disabled>wyślij tego maila</button>
+</div>
+
+<div id="sukces" class="card hidden">
+    email wysłany nawet poprawnie
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
