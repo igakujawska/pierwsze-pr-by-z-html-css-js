@@ -1,0 +1,104 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background-color:#faf9f7;
+    color:#5c5c5c;font-family:'Georgia',serif;
+    display:flex;
+    justify-content:center;
+    padding-top:60px;
+    min-height:100vh;
+}
+.organic-box{
+    background-color:#ffffff;
+    width:100%;
+    max-width:500px;
+    padding:45px 35px;
+    border:1px solid #e8e5e1;
+    box-shadow:0 10px 30px rgba(0,0,0,0.03);
+    border-radius:2px;
+}
+h1{
+    font-weight:normal;
+    text-align:center;
+    font-size:2rem;
+    color:#4a4a4a;
+    margin-bottom:35px;
+    letter-spacing:1px;
+    text-transform:lowercase;
+}
+.input-section{
+    display:flex;
+    gap:15px;
+    margin-bottom:35px;
+}
+input{
+    flex-grow:1;
+    padding:10px 0;
+    border:none;
+    border-bottom:1px solid #d1d7d0;
+    background-color:transparent;
+    font-family:'Arial',sans-serif;
+    font-size:0.95rem;
+    color:#5c5c5c;
+    outline:none;
+    transition:border-color 0.3s;
+}
+input:focus{
+    border-bottom:1px solid #ecd8d6;
+}
+button{
+    background-color:#ecd8d6;
+    color:#5c5c5c;
+    border:none;
+    padding:10px 25px;
+    border-radius:2px;
+    font-family:'Arial',sans-serif;
+    font-size:0.85rem;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    cursor:pointer;
+    transition:background-color 0.3s;
+}
+button:hover{
+    background-color:#e3cbc9;
+}
+ul{
+    list-style-type:none;
+}
+li{
+    padding:14px 18px;
+    border-radius:2px;
+    margin-bottom:10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    cursor:pointer;
+    font-family:'Arial',sans-serif;
+    font-size:0.9rem;
+    color:#555;
+    animation:popIn 0.4s ease forwards;}
+li:nth-child(4n+1){background-color:#fcf8f8;}
+li:nth-child(4n+2){background-color:#f5f8f6;}
+li:nth-child(4n+3){background-color:#f6f8fb;}
+li:nth-child(4n+4){background-color:#fdfbf5;}
+@keyframes popIn{0%{opacity:0;transform:translateY(5px);}100%{opacity:1;transform:translateY(0);}}
+.crossed{
+    text-decoration:line-through;
+    text-decoration-thickness:1px;
+    color:#b3b3b3;
+    opacity:0.8;
+}
+.delete-btn{
+    background:none;
+    border:none;
+    font-size:1.1rem;
+    cursor:pointer;
+    color:#d4d4d4;
+    transition:color 0.2s;
+}
+.delete-btn:hover{
+    color:#ecd8d6;
+}
