@@ -1,4 +1,4 @@
-import { Component, computed, Input, input} from '@angular/core';
+import { Component, computed, EventEmitter, Input, input, Output} from '@angular/core';
 import { DUMMY_USERS } from '../dummy-users';
 
 const randomIndex = Math.floor(Math.random()*DUMMY_USERS.length) //wylosowanie z listy pojedynczego usera
@@ -12,10 +12,11 @@ const randomIndex = Math.floor(Math.random()*DUMMY_USERS.length) //wylosowanie z
 export class User {
     // @Input({required: true}) avatar!: string;
     // @Input({required: true}) name!: string;
-
+    id = input.required<string>();
     avatar = input.required<string>();
     name = input.required<string>();
 
+    @Output() select = new EventEmitter();
 
   // selectedUser = signal(DUMMY_USERS[randomIndex]);
   imagePath = computed(() => { return '/users/' + this.avatar() })
@@ -25,9 +26,10 @@ export class User {
   //   return '/users/'+ this.avatar
   // }
 
-  onSelectUser() {}
-
+  onSelectUser() {
+    this.select.emit(this.id);
+  }
+}
 
     // const randomIndex = Math.floor(Math.random()*DUMMY_USERS.length) 
-    // this.selectedUser.set(DUMMY_USERS[randomIndex]);
-  
+    // this.selectedUser.set(DUMMY_USERS[randomIndex])
