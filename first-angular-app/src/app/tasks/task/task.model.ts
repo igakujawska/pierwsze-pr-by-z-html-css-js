@@ -1,0 +1,7 @@
+export interface Tassk{
+  id: string;
+  userId: string;
+  title: string;
+  summary: string;
+  dueDate: string;
+}

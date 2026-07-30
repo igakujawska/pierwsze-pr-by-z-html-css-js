@@ -35,7 +35,13 @@ tasks = [
     dueDate: '2024-06-15',
   },
 ]
+
 get selectedUserTasks(){
   return this.tasks.filter((task) => task.userId===this.userId)
 }
+
+onCompleteTask(id: string){
+    this.tasks = this.tasks.filter((task) => task.id !==id)
+}
+
 }

@@ -1,18 +1,7 @@
 import { Component, computed, input, output } from '@angular/core';
 //import { DUMMY_USERS } from '../dummy-users'; //w ramach cwiczenia
 //const randomIndex = Math.floor(Math.random()*DUMMY_USERS.length) //wylosowanie z listy pojedynczego usera
-
-// type User={
-//     id: string;
-//     avatar: string;
-//     name: string;
-// } do krótszych projektów type, do dłuzszych interface
-
-interface User {
-    id: string;
-    avatar: string;
-    name: string;
-}
+import { type User } from './user.model';
 
 @Component({
   selector: 'app-user',
@@ -23,7 +12,7 @@ interface User {
 
 export class UserComponent {
   user = input.required<User>();
-
+  selected = input.required<boolean>();
   select = output<string>();
 
   imagePath = computed(() => '/users/' + this.user().avatar);
