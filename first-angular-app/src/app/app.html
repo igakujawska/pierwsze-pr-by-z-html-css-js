@@ -12,7 +12,6 @@
         }
     </ul>
 
-    TASKS OF THAT USER
-    <app-tasks [name]="selectedUser.name"/>
+    <app-tasks [name]="selectedUser ? selectedUser.name : ''"/>
 </main>
 
