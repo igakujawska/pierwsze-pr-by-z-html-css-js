@@ -1,1 +1,0 @@
-poważne projekty do nauki
